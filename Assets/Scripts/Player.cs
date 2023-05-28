@@ -22,14 +22,14 @@ public class Player : MonoBehaviour
         if(!canMove){
             // eğer hareket yönünün tersine gidemiyorsak
             //sadece x yönüne izin ver
-            Vector3 moveDirX= new Vector3(movDir.x,0,0);
+            Vector3 moveDirX= new Vector3(movDir.x,0,0).normalized;
             canMove =!Physics.CapsuleCast(transform.position,transform.position+Vector3.up*playerHeight ,playerRadius,moveDirX,movDistance);
             if(canMove){
                 //eğer sadece x de hareket edebiliyorsak
                 movDir=moveDirX;
             }else {
                 // eğer sadece x yönünde hareket edemiyorsak  z ye izin ver
-                Vector3 moveDirZ = new Vector3(0,0,movDir.z);
+                Vector3 moveDirZ = new Vector3(0,0,movDir.z).normalized;
                 canMove =!Physics.CapsuleCast(transform.position,transform.position+Vector3.up*playerHeight ,playerRadius,moveDirZ,movDistance);
                 if(canMove){
                     //z yönüne izin ver
@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
                 }
             }
         transform.position+=movDir*movDistance;
+        }
+        if(canMove){
+            transform.position+=movDir*movDistance;
         }
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward,movDir,Time.deltaTime*rotateSpeed);
