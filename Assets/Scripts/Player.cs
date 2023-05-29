@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,16 @@ public class Player : MonoBehaviour
     private bool isWalking;
     
     private Vector3 lastInteractDir;
-    
+    void Start()
+    {
+        gameInput.OnInteractAction+= GameInput_OnInteractAction;
+    }
+
+    private void GameInput_OnInteractAction(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
+    }
+
     private void Update()
     {
         HandleMovement();
