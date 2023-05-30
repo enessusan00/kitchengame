@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance { get; private set; } 
+    public static Player Instance { get; private set; }
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
@@ -21,11 +21,12 @@ public class Player : MonoBehaviour
     private Vector3 lastInteractDir;
     void Awake()
     {
-        if(Instance!=null){
+        if (Instance != null)
+        {
             Debug.Log("Player already exists. It means more than one player");
 
         }
-        Instance =this;
+        Instance = this;
     }
     void Start()
     {
@@ -116,7 +117,7 @@ public class Player : MonoBehaviour
             lastInteractDir = movDir;
         }
         float interactDistance = 2f;
-        if (Physics.Raycast(transform.position, movDir, out RaycastHit raycastHit, interactDistance, counterLayerMask))
+        if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, counterLayerMask))
         {
             if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
             {
@@ -127,14 +128,14 @@ public class Player : MonoBehaviour
             }
             else
             {
-                 SetSelectedCounter(null);
+                SetSelectedCounter(null);
             }
         }
         else
         {
             SetSelectedCounter(null);
         }
-
+        Debug.Log(selectedCounter);
     }
 
     private void SetSelectedCounter(ClearCounter selectedCounter)
