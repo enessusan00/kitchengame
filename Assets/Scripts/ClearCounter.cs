@@ -6,20 +6,54 @@ public class ClearCounter : MonoBehaviour
 {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
     [SerializeField] private Transform counterTopPoint;
+    [SerializeField] private ClearCounter secondClearCounter;
+    [SerializeField] private bool testing;
     private KitchenObject kitchenObject;
+
+    void Update()
+    {
+        if (testing && Input.GetKeyDown(KeyCode.T))
+        {
+            if (kitchenObject != null)
+            {
+                // obje parenti değiştirir
+                kitchenObject.SetClearCounter(secondClearCounter);
+            }
+        }
+    }
+
+
     public void Interact()
     {
         if (kitchenObject == null)
-        {
+        {//obje spawnlar
             Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTopPoint);
-            kitchenObjectTransform.localPosition = Vector3.zero;
-            Debug.Log("interact");
-            Debug.Log(kitchenObjectTransform.GetComponent<KitchenObject>().GetKitchenObjectSO().objectName);
-
-            kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
-            kitchenObject.SetClearCounter(this);
-        }else{
-          Debug.Log(kitchenObject.GetClearCounter());
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetClearCounter(this);
         }
+        else
+        {
+            Debug.Log(kitchenObject.GetClearCounter());
+        }
+
+    }
+    public Transform GetKitchenObjectFollowTransform()
+    {
+        return counterTopPoint;
+    }
+    public void SetKitchenObject(KitchenObject kitchenObject)
+    {
+        this.kitchenObject = kitchenObject;
+    }
+    public KitchenObject GetKitchenObject()
+    {
+        return kitchenObject;
+    }
+    public void  ClearKitchenObject()
+    {
+        kitchenObject = null;
+    }
+    public bool HasKitchenObject()
+    {
+        return kitchenObject != null;
     }
 }
