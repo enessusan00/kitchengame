@@ -5,7 +5,7 @@ using UnityEngine;
 public class KitchenObject : MonoBehaviour
 {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
-    private IKitchenObjectParent  kitchenObjectParent;
+    private IKitchenObjectParent kitchenObjectParent;
     public KitchenObjectSO GetKitchenObjectSO()
     {
         return kitchenObjectSO;
@@ -16,13 +16,13 @@ public class KitchenObject : MonoBehaviour
         {
             this.kitchenObjectParent.ClearKitchenObject();
         }
-        this.kitchenObjectParent = kitchenObjectParent; 
+        this.kitchenObjectParent = kitchenObjectParent;
         // bu olay gerçekleşmez ama aksi durumda kontrol edilmeli
         if (kitchenObjectParent.HasKitchenObject())
         {
             Debug.LogError("IKitchenObjectParent Zaten KitchenObject'e sahip");
         }
-        kitchenObjectParent.SetKitchenObject(this);    
+        kitchenObjectParent.SetKitchenObject(this);
         // obje parenti değiştiğinde konumu günceller
         transform.parent = kitchenObjectParent.GetKitchenObjectFollowTransform();
         transform.localPosition = Vector3.zero;
@@ -31,5 +31,21 @@ public class KitchenObject : MonoBehaviour
     {
         return kitchenObjectParent;
     }
+    public void DestroySelf()
+    {
+        kitchenObjectParent.ClearKitchenObject();
+        Destroy(gameObject);
+    }
+    public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
+    {
+        Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
+
+        KitchenObject kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
+
+        kitchenObject.SetKitchenObjectParent(kitchenObjectParent);
+
+        return kitchenObject;
+    }
+
 }
 
