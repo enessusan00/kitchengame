@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c5dd82c43191f4f923603418bc7f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 6484827077803045215}
   visualGameObjectArray:
   - {fileID: 7436527789169413338}
   - {fileID: 8811609202007909203}
@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 3397834053018213720, guid: 00b17497ca786c1438442c99f5e36503,
         type: 3}
       propertyPath: m_Name
-      value: ContainerCounter-Tomato
+      value: ContainerCounter-Bread
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterTopPoint: {fileID: 941576833103316922}
-  kitchenObjectSO: {fileID: 11400000, guid: c3ae93950268f524fb97d6bab7981cdf, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: 5022b139ce9fa79428c951f9b6da76e2, type: 2}
 --- !u!4 &941576833103316922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363418963245851701, guid: 00b17497ca786c1438442c99f5e36503,
@@ -313,6 +313,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908579851339366089}
     m_Modifications:
+    - target: {fileID: 1129597680515274161, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129597680515274161, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.342
+      objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
         type: 3}
       propertyPath: m_Name
@@ -377,7 +387,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 91e8fe3de9249fc44b7bdd8050062896,
+      objectReference: {fileID: 21300000, guid: 77b28124b8bda494381c80bd5aa42c22,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -412,4 +422,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd0b33120f90524a803693b4ece8855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containerCounter: {fileID: 0}
+  containerCounter: {fileID: 6484827077803045215}
