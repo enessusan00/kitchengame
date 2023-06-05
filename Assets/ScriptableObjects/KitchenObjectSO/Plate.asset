@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85158e386af634645b56139649e708a3, type: 3}
-  m_Name: Cooked-Burned
+  m_Script: {fileID: 11500000, guid: c212cb30b8eef1f4f9dae31e700a4f19, type: 3}
+  m_Name: Plate
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 5897ba9a655d74b42aa0e7a42fbc8bca, type: 2}
-  output: {fileID: 11400000, guid: e552f87df3777244c91fd6dae0fd5dc2, type: 2}
-  burningTimerMax: 5
+  prefab: {fileID: 476604579201933868, guid: 27a89e373b705fa479d796c91380c127, type: 3}
+  sprite: {fileID: 21300000, guid: 3928afb5321bb3d489bbd4ac581b29a2, type: 3}
+  objectName: Plate
