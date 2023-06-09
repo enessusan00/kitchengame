@@ -9,18 +9,42 @@ public class ClearCounter : BaseCounter
     {
         if (!HasKitchenObject())
         {//obje yok 
-        if(player.HasKitchenObject()){
-            // playerda obje var
-            player.GetKitchenObject().SetKitchenObjectParent(this);
-        }else{
-            // player obje yok
-        }
+            if (player.HasKitchenObject())
+            {
+                // playerda obje var
+                player.GetKitchenObject().SetKitchenObjectParent(this);
+            }
+            else
+            {
+                // player obje yok
+            }
 
-        }else{
+        }
+        else
+        {
             // masada obje var
-            if(player.HasKitchenObject()){
+            if (player.HasKitchenObject())
+            {
+                //playerda tabak varsa masadaki objeyi al
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                {
+                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        GetKitchenObject().DestroySelf();
+                    }
+                }else{
+                    //playerda tabakdan başka obje var
+                    //eğer masada tabak da varsa 
+                    if(GetKitchenObject().TryGetPlate(out plateKitchenObject)){
+                        if(plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO())){
+                            player.GetKitchenObject().DestroySelf();
+                        }
+                    } 
+                }
                 //playerda da obje var
-            }else{
+            }
+            else
+            {
                 //player obje yok
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
