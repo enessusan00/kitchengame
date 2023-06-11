@@ -4,5 +4,5 @@ using UnityEngine;
 //[CreateAssetMenu()]
 public class RecipeListSO : ScriptableObject
 {
-   public List<RecipeSO> recipes;
+   public List<RecipeSO> recipeSOList;
 }
