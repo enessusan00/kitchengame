@@ -1,6 +1,6 @@
-# kitchengame
+# Kitchen Chaos
 for learning Unity from Codemonkey<br />
-In this game i learned this:<br />
+##In this game i learned this:<br />
 Unity Layout<br />
 Best practices for coding style and naming conventions in Unity<br />
 Importing Assets<br />
