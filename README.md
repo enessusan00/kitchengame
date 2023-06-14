@@ -1,6 +1,6 @@
 # Kitchen Chaos
 for learning Unity from Codemonkey<br />
-##In this game i learned this:<br />
+## In this game i learned this:<br />
 Unity Layout<br />
 Best practices for coding style and naming conventions in Unity<br />
 Importing Assets<br />
@@ -19,7 +19,7 @@ Implementing game start, pause, and game over functionalities<br />
 Menu Systems<br />
 Polishing and Optimization<br />
 
-
+This site was built using [Youtube](https://www.youtube.com/watch?v=AmGSEH7QcDg&t=23427s) tutorial.
 ![Ekran görüntüsü 2023-06-14 142417](https://github.com/enessusan00/kitchengame/assets/69691286/b010ade7-d8c2-44b6-89e0-37daaea23552)
 ![Ekran görüntüsü 2023-06-14 142509](https://github.com/enessusan00/kitchengame/assets/69691286/4a3a6798-543d-47ed-9487-7021960b9b45)
 ![Ekran görüntüsü 2023-06-14 142256](https://github.com/enessusan00/kitchengame/assets/69691286/00f7c837-0ef3-433f-bba3-19c722b07574)
