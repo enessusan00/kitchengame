@@ -14,7 +14,6 @@ public class DeliveryManagerSingleUI : MonoBehaviour {
 
     private void Awake() {
         iconTemplate.gameObject.SetActive(false);
-        //dd    
     }
 
     public void SetRecipeSO(RecipeSO recipeSO) {

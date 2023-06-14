@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26892af7ca35b8e479d7dab3e9f8c959, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c1b9d05eef7cd94a9f0a6c230c7aefb, type: 3}
   m_Name: Tomato-TomatoSlices
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: c3ae93950268f524fb97d6bab7981cdf, type: 2}
-  output: {fileID: 11400000, guid: faff45bd9a6676841842ec72bbab0bd8, type: 2}
+  input: {fileID: 11400000, guid: 0a615e1c7288587449871fd434e85ab6, type: 2}
+  output: {fileID: 11400000, guid: 455ac2b492a3c3442bf926b427bb40d2, type: 2}
   cuttingProgressMax: 3

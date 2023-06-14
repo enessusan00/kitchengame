@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeliveryCounter : BaseCounter
-{
-  
+public class DeliveryCounter : BaseCounter {
+
+
     public static DeliveryCounter Instance { get; private set; }
 
 
@@ -24,4 +24,5 @@ public class DeliveryCounter : BaseCounter
             }
         }
     }
+
 }
