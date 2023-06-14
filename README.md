@@ -1,24 +1,23 @@
 # kitchengame
-for learning Unity from Codemonkey
-In this game i learned this:
-Unity Layout
-Best practices for coding style and naming conventions in Unity
-Importing Assets
-
-Importing game assets into Unity, such as models, textures, and audio files
-Character Controller
-Implementing character movement and interaction controls
-Animations
-Cinemachine
-Collision Detection
-Scriptable Objects
-UI Design and Canvas
-Designing and implementing user interfaces using Unity's UI system
-Audio Management
-Game Flow and Scene Transitions
-Implementing game start, pause, and game over functionalities
-Menu Systems
-Polishing and Optimization
+for learning Unity from Codemonkey<br />
+In this game i learned this:<br />
+Unity Layout<br />
+Best practices for coding style and naming conventions in Unity<br />
+Importing Assets<br />
+Importing game assets into Unity, such as models, textures, and audio files<br />
+Character Controller<br />
+Implementing character movement and interaction controls<br />
+Animations<br />
+Cinemachine<br />
+Collision Detection<br />
+Scriptable Objects<br />
+UI Design and Canvas<br />
+Designing and implementing user interfaces using Unity's UI system<br />
+Audio Management<br />
+Game Flow and Scene Transitions<br />
+Implementing game start, pause, and game over functionalities<br />
+Menu Systems<br />
+Polishing and Optimization<br />
 
 
 ![Ekran görüntüsü 2023-06-14 142417](https://github.com/enessusan00/kitchengame/assets/69691286/b010ade7-d8c2-44b6-89e0-37daaea23552)
